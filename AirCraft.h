@@ -17,10 +17,12 @@ public:
   int get_max_ammo();
   int get_base_damage();
   int get_actual_ammo();
+
   std::string get_type();
   std::string get_status();
 
   int fight();
+  void refill(int number);
 };
 
 #endif /* AIRCRAFT_H_ */
