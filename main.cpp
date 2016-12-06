@@ -12,7 +12,9 @@ int main (){
   std::cout << f35.get_status();
   std::cout << std::endl;
 
-  f16.refill(10);
+  int a = 10;
+
+  f16.refill(a);
   std::cout << f16.get_status();
   std::cout << std::endl;
   f16.fight();

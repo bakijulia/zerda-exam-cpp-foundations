@@ -22,7 +22,7 @@ public:
   std::string get_status();
 
   int fight();
-  void refill(int number);
+  void refill(int &number);
 };
 
 #endif /* AIRCRAFT_H_ */

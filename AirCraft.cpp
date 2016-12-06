@@ -39,11 +39,14 @@ int AirCraft::fight(){
   return all_damage;
 }
 
-void AirCraft::refill(int number){
+void AirCraft::refill(int &number){
   int ideal_refill = actual_ammo + number;
   if(ideal_refill > max_ammo){
+    int susbtarct = ideal_refill - max_ammo;
     actual_ammo = max_ammo;
+    number -= susbtarct;
   } else {
     actual_ammo = ideal_refill;
+    number -= ideal_refill - actual_ammo;
   }
 }
