@@ -35,9 +35,9 @@ void Carrier::set_total_damage() {
 std::string Carrier::get_status() {
   std::string status;
   if(is_dead()){
-    status += "It's dead Jim :(";
+    status += "It's dead Jim :( ";
   }
-  status = "Aircraft count: " + std::to_string(air_crafts.size())
+  status += "Aircraft count: " + std::to_string(air_crafts.size())
       + " Ammo Storage: " + std::to_string(store_of_ammo) + " Total damage: "
       + std::to_string(total_damage) + '\n' + "Aircrafts:" + '\n';
   for (unsigned int i = 0; i < air_crafts.size(); i++) {
