@@ -6,6 +6,7 @@ AirCraft::AirCraft() {
   max_ammo = 0;
   base_damage = 0;
   actual_ammo = 0;
+  all_damage = 0;
 }
 
 AirCraft::~AirCraft() {}
@@ -29,5 +30,11 @@ std::string AirCraft::get_type(){
 std::string AirCraft::get_status(){
 
   return "Type: " + get_type() + " " + "Actual ammo: " + std::to_string(actual_ammo) + " " + "Max ammo: " + std::to_string(max_ammo) + " "
-      + " " + "Base Damage: " + std::to_string(base_damage) + " " + "All Damage: ";
+      + " " + "Base Damage: " + std::to_string(base_damage) + " " + "All Damage: " + std::to_string(all_damage);
+}
+
+int AirCraft::fight(){
+  all_damage = base_damage * actual_ammo;
+  actual_ammo = 0;
+  return all_damage;
 }

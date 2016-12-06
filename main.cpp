@@ -11,5 +11,9 @@ int main (){
   std::cout << std::endl;
   std::cout << f35.get_status();
 
+  std::cout << std::endl;
+  f16.fight();
+  std::cout << f16.get_status();
+
   return 0;
 }

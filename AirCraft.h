@@ -8,15 +8,19 @@ public:
   int max_ammo;
   int base_damage;
   int actual_ammo;
+  int all_damage;
   std::string type;
 
   AirCraft();
   virtual ~AirCraft();
+
   int get_max_ammo();
   int get_base_damage();
   int get_actual_ammo();
   std::string get_type();
   std::string get_status();
+
+  int fight();
 };
 
 #endif /* AIRCRAFT_H_ */
