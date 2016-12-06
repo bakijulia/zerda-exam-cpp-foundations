@@ -7,6 +7,7 @@ AirCraft::AirCraft() {
   base_damage = 0;
   actual_ammo = 0;
   all_damage = 0;
+  needed_ammo = max_ammo - actual_ammo;
 }
 
 AirCraft::~AirCraft() {}

@@ -9,6 +9,7 @@ public:
   int base_damage;
   int actual_ammo;
   int all_damage;
+  int needed_ammo;
   std::string type;
 
   AirCraft();

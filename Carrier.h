@@ -20,6 +20,7 @@ public:
 
   void add_air_craft(std::string);
   std::string get_status();
+  void fill();
 };
 
 #endif /* CARRIER_H_ */
