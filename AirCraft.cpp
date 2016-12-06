@@ -1,5 +1,6 @@
 #include "AirCraft.h"
 #include <iostream>
+#include <string>
 
 AirCraft::AirCraft() {
   max_ammo = 0;
@@ -25,9 +26,8 @@ std::string AirCraft::get_type(){
   return type;
 }
 
-void AirCraft::print_status(){
-  std::cout << "Type: " << get_type() << " ";
-  std::cout << "Max ammo: " << get_max_ammo() << " ";
-  std::cout << "Actual ammo: " << get_actual_ammo() << " ";
-  std::cout << "Base damage: " << get_base_damage() << " ";
+std::string AirCraft::get_status(){
+
+  return "Type: " + get_type() + " " + "Actual ammo: " + std::to_string(actual_ammo) + " " + "Max ammo: " + std::to_string(max_ammo) + " "
+      + " " + "Base Damage: " + std::to_string(base_damage) + " " + "All Damage: ";
 }

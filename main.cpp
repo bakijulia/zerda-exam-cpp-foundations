@@ -7,9 +7,9 @@ int main (){
   F16 f16;
   F35 f35;
 
-  f16.print_status();
+  std::cout << f16.get_status();
   std::cout << std::endl;
-  f35.print_status();
+  std::cout << f35.get_status();
 
   return 0;
 }
