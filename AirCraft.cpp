@@ -28,7 +28,6 @@ std::string AirCraft::get_type(){
 }
 
 std::string AirCraft::get_status(){
-
   return "Type: " + get_type() + " " + "Actual ammo: " + std::to_string(actual_ammo) + " " + "Max ammo: " + std::to_string(max_ammo) + " "
       + " " + "Base Damage: " + std::to_string(base_damage) + " " + "All Damage: " + std::to_string(all_damage);
 }

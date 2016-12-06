@@ -1,24 +1,13 @@
-#include "AirCraft.h"
 #include "F16.h"
 #include "F35.h"
+#include "Carrier.h"
 #include <iostream>
 
 int main (){
-  F16 f16;
-  F35 f35;
+  Carrier carrier_1(100);
+  carrier_1.add_air_craft("F16");
 
-  std::cout << f16.get_status();
-  std::cout << std::endl;
-  std::cout << f35.get_status();
-  std::cout << std::endl;
-
-  int a = 10;
-
-  f16.refill(a);
-  std::cout << f16.get_status();
-  std::cout << std::endl;
-  f16.fight();
-  std::cout << f16.get_status();
+  std::cout << carrier_1.get_status();
 
   return 0;
 }
