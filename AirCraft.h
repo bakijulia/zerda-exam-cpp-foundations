@@ -22,6 +22,7 @@ public:
   std::string get_type();
   std::string get_status();
 
+  void set_all_damage();
   int fight();
   void refill(int &number);
 };

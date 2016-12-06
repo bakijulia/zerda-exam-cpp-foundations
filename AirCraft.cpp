@@ -33,8 +33,11 @@ std::string AirCraft::get_status(){
       + " " + "Base Damage: " + std::to_string(base_damage) + " " + "All Damage: " + std::to_string(all_damage);
 }
 
-int AirCraft::fight(){
+void AirCraft::set_all_damage(){
   all_damage = base_damage * actual_ammo;
+}
+
+int AirCraft::fight(){
   actual_ammo = 0;
   return all_damage;
 }
@@ -45,8 +48,10 @@ void AirCraft::refill(int &number){
     int susbtarct = ideal_refill - max_ammo;
     actual_ammo = max_ammo;
     number -= susbtarct;
+    set_all_damage();
   } else {
     actual_ammo = ideal_refill;
     number -= ideal_refill - actual_ammo;
+    set_all_damage();
   }
 }
